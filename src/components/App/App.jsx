@@ -36,11 +36,7 @@ export const App = () => {
           },
         });
 
-        setImages(prevImages =>
-          currentPage === 1
-            ? response.data.hits
-            : [...prevImages, ...response.data.hits]
-        );
+        setImages(prevImages => [...prevImages, ...response.data.hits]);
         setTotalPages(Math.ceil(response.data.totalHits / 12));
       } catch (error) {
         error('Error fetching images');
