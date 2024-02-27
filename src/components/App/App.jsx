@@ -52,6 +52,9 @@ export const App = () => {
   const handleSearch = searchQuery => {
     setSearchName(searchQuery);
     setCurrentPage(1);
+    setImages([]);
+    setIsLoading(false);
+    setTotalPages(0);
   };
 
   const loadMoreImages = () => {
